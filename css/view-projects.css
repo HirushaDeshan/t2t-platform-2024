@@ -156,3 +156,450 @@
     width: 75%;
   }
 }
+
+/* styles */
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #ffffff;
+  color: #3a506b;
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+
+/* Header section */
+.header-image-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-height: 700px;
+}
+
+.header-image {
+  width: 100%;
+  height: auto;
+}
+
+.header-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  box-sizing: border-box;
+  max-width: 1200px;
+}
+
+.header-title {
+  font-size: 4rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.header-buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.header-button {
+  margin: 0.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  background-color: #3a506b;
+  color: #f5f5f5;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.header-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  background-color: #5bc0be;
+}
+
+.header-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 119, 255, 0.4);
+}
+
+.header-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: #0077ff;
+}
+
+/* Navbar section */
+.navbar-logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5bc0be;
+  text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link.active {
+  color: #5bc0be;
+}
+
+.navbar-nav .nav-link[href="#contact-us"],
+.navbar-nav .nav-link[href="#about-us"] {
+  color: #5bc0be;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+}
+
+.navbar-collapse ul.navbar-nav {
+  margin-left: auto;
+}
+
+/* Description section */
+.description-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.description-text-container {
+  text-align: center;
+}
+
+.description-text {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #1c2541;
+  margin-bottom: 1rem;
+}
+
+/* Benefits section */
+.benefits {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.benefit {
+  display: flex;
+  justify-content: top;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem;
+  max-width: 90%;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.benefit-image-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.benefit-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.benefit-text-container {
+  padding: 2rem;
+  text-align: left;
+}
+
+.benefit h2 {
+  font-size: 2rem;
+  color: #3a506b;
+  margin-bottom: 1rem;
+}
+
+.benefit ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.benefit li {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #3a506b;
+  margin-bottom: 0.5rem;
+}
+
+.benefit li i {
+  margin-right: 0.5rem;
+  color: #5bc0be;
+}
+
+.benefit-button {
+  background-color: #5bc0be;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.benefit-button:hover {
+  background-color: #1c2541;
+}
+
+/* Footer section */
+.footer {
+  background-color: #0b132b;
+  color: #f5f5f5;
+  text-align: center;
+  padding: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+
+@keyframes dots {
+  0% {
+    content: ".";
+  }
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+  100% {
+    content: ".";
+  }
+}
+
+.loading-dots::after {
+  content: ".";
+  animation: dots 1s infinite;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1200px) {
+  .description-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefits {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .benefit {
+    margin: 1rem 0;
+  }
+
+  .benefit-image-container {
+    height: 300px;
+  }
+
+  .benefit-text-container {
+    padding: 1rem;
+  }
+
+  .benefit h2 {
+    font-size: 1.5rem;
+  }
+
+  .benefit li {
+    font-size: 1rem;
+  }
+
+  .header-title {
+    font-size: 3rem;
+  }
+
+  .header-buttons-container {
+    margin-top: 1rem;
+  }
+
+  .header-button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .projects-list {
+    justify-content: center;
+  }
+
+  .project {
+    margin: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+
+  .project-goal {
+    font-size: 1rem;
+  }
+
+  .project-requirements,
+  .project-deadline {
+    font-size: 0.8rem;
+  }
+
+  .view-all-projects {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .header-subtitle {
+    font-size: 1.5rem;
+  }
+
+  .header-button {
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .benefit {
+    max-width: 100%;
+  }
+
+  .benefit-text-container {
+    padding: 1rem;
+  }
+
+  .benefit h2 {
+    font-size: 1.5rem;
+  }
+
+  .benefit li {
+    font-size: 1rem;
+  }
+
+  .projects-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .project-title {
+    font-size: 1.5rem;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+
+  .project-goal {
+    font-size: 1rem;
+  }
+
+  .project-requirements,
+  .project-deadline {
+    font-size: 0.8rem;
+  }
+
+  .view-all-projects {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .header-subtitle {
+    font-size: 1rem;
+  }
+
+  .header-button {
+    font-size: 0.5rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .benefit {
+    max-width: 100%;
+  }
+
+  .benefit-text-container {
+    padding: 1rem;
+  }
+
+  .benefit h2 {
+    font-size: 1.2rem;
+  }
+
+  .benefit li {
+    font-size: 0.8rem;
+  }
+
+  .projects-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .project-title {
+    font-size: 1.2rem;
+  }
+
+  .company-name {
+    font-size: 0.8rem;
+  }
+
+  .project-goal {
+    font-size: 0.8rem;
+  }
+
+  .project-requirements,
+  .project-deadline {
+    font-size: 0.6rem;
+  }
+
+  .view-all-projects {
+    font-size: 0.8rem;
+  }
+}
