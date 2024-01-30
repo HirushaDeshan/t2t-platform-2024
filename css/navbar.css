@@ -1,0 +1,18 @@
+.navbar-logo a {
+  font-size: 24px;
+  font-weight: bold;
+  color: #5bc0be;
+  text-decoration: none;
+}
+
+.navbar-light .navbar-nav .nav-link.custom-nav-link {
+  color: #5bc0be;
+}
+
+.navbar-nav .nav-link {
+  font-size: 18px;
+}
+
+.navbar-collapse ul.navbar-nav {
+  margin-left: auto;
+}

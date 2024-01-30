@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Project List</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/view-projects.css" />
+    <script src="js/globals.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="navbar-logo">
+          <a href="index.html">TRACE T2T</a>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarSupportedContent"
+        >
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link active" href="index.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Register
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="add-student.html"
+                  >Register as a Student</a
+                >
+                <a class="dropdown-item" href="add-mentor.html"
+                  >Register as a Mentor</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="view-projects.html">Apply Now</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="add-project.html">Add Project</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link custom-nav-link"
+                href="../index.html#contact-us"
+                class="active"
+                >Contact Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link custom-nav-link"
+                href="../index.html#about-us"
+                class="active"
+                >About Us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header-image-container">
+        <img
+          src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80"
+          alt="Tech Projects"
+          class="header-image"
+        />
+        <div class="header-text-container">
+          <h1 class="header-title">Explore Projects</h1>
+        </div>
+      </div>
+    </header>
+
+    <section class="description">
+      <div class="description-container">
+        <div class="description-text-container">
+          <p class="description-text">
+            As a student, you have the opportunity to explore a wide range of
+            exciting projects and collaborate with top companies in the
+            industry. Don't miss out on the chance to gain valuable experience,
+            build your portfolio, and make meaningful connections in the
+            industry. Select your favorite projects and start bidding today!
+          </p>
+        </div>
+      </div>
+    </section>
+    <div class="header-buttons-container">
+      <a href="#">
+        <button class="header-button">Add New Project</button>
+      </a>
+    </div>
+    <section class="search-bar">
+      <!-- Search bar -->
+      <input type="text" id="search-bar" placeholder="Search projects..." />
+    </section>
+    <section class="projects">
+      <!-- Project list -->
+      <ul class="project-list">
+        <!-- Project list items added by JS -->
+        <span class="loading-dots">Please wait, loading projects</span>
+      </ul>
+    </section>
+    <div class="pagination">
+      <!-- Pagination controls will be dynamically added here -->
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/projects-fetch.js"></script>
+    <script src="js/search.js"></script>
+  </body>
+</html>

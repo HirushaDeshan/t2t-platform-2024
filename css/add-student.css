@@ -1,0 +1,170 @@
+.add-student-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-student-form {
+  max-width: 800px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.add-student-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.add-student-form .form-group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.add-student-form label {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.add-student-form input,
+.add-student-form textarea {
+  width: 100%;
+  padding: 15px 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.mandatory::after {
+  content: "* ";
+  color: red;
+  margin-left: 5px;
+}
+.mandatory-container {
+  font-size: 1rem;
+  color: #b4713a;
+  margin-bottom: 1rem;
+  position: flex;
+}
+
+.add-student-form input[type="number"]::-webkit-outer-spin-button,
+.add-student-form input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add-student-form .submit-button {
+  background-color: #0077ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 20px;
+  margin-left: 0;
+}
+
+.add-student-form .submit-button:hover {
+  background-color: #005ae6;
+}
+
+.add-student-form .form-group.full-width {
+  width: 100%;
+}
+
+/* Header section */
+.header-image-container {
+  max-height: 300px;
+}
+
+.header-image {
+  margin-top: -300px;
+}
+
+#normal-message {
+  display: none;
+  align-content: center;
+  text-align: center;
+  color: #005ae6;
+}
+
+#warning-message {
+  display: none;
+  align-content: center;
+  text-align: center;
+  color: #e54141;
+}
+
+.loading-dots {
+  display: none;
+}
+
+.loading-container {
+  align-items: center;
+  text-align: center;
+}
+
+/* Responsive design */
+@media screen and (max-width: 1000px) {
+  .header-image-container {
+    max-height: 300px;
+  }
+
+  .header-image {
+    margin-top: -10%;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .header-image {
+    margin-top: -10%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header-image {
+    margin-top: -10%;
+  }
+  .add-student-container {
+    align-items: flex-start;
+  }
+  .add-student-form {
+    max-width: 100%;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .add-student-form .form-group {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .add-student-form .submit-button {
+    margin-top: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .add-student-form {
+    margin-top: 0px;
+  }
+
+  .add-student-form .form-group {
+    width: calc(50% - 10px);
+  }
+
+  .add-student-form .form-group.full-width {
+    width: 100%;
+  }
+}
