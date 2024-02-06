@@ -38,12 +38,14 @@ function renderProjects() {
       {
         icon: "fas fa-bullseye",
         label: "Goal",
-        value: toSentenceCase(project.Goal),
+        value: createReadMoreSection(project.Goal),
+        // value: project.Goal,
       },
       {
         icon: "fas fa-tasks",
         label: "Tasks",
-        value: toSentenceCase(project.Tasks),
+        value: createReadMoreSection(project.Tasks),
+        // value: project.Tasks,
       },
       { icon: "fas fa-code", label: "Technology", value: project.Technology },
       {
@@ -68,6 +70,8 @@ function renderProjects() {
     detailItems.forEach((item) => {
       const div = document.createElement("div");
       const span = document.createElement("span");
+      // Add a specific class to the span
+      span.className = "project-details-span";
       span.style.fontWeight = "bold";
       span.innerHTML = `<i class="${item.icon}"></i>&nbsp; ${item.label}:`;
       div.appendChild(span);
@@ -102,7 +106,30 @@ function renderProjects() {
 
   renderPaginationControls(data.records.length);
 }
+function createReadMoreSection(text) {
+  const maxLength = 100;
 
+  if (text.length <= maxLength) {
+    return `<span>${text}</span>`;
+  }
+
+  const truncatedText = text.substr(0, maxLength);
+  const remainingText = text.substr(maxLength);
+  const readMoreLink = `<a href="javascript:void(0);" class="read-more-link" onclick="showFullText(this);"> Read More</a>`;
+  const hiddenSpan = `<span class="hidden-text" style="display:none;">${remainingText}</span>`;
+
+  return `<span>${truncatedText}${readMoreLink}${hiddenSpan}</span>`;
+}
+
+function showFullText(element) {
+  const parentElement = element.parentNode;
+  const hiddenSpan = parentElement.querySelector(".hidden-text");
+
+  if (hiddenSpan) {
+    hiddenSpan.style.display = "inline"; // Show the hidden span
+    element.style.display = "none"; // Hide the "Read More" link
+  }
+}
 function renderPaginationControls(totalProjects) {
   const totalPages = Math.ceil(totalProjects / projectsPerPage);
   pagination.innerHTML = "";
