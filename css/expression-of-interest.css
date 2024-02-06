@@ -157,6 +157,32 @@
   border-color: #333 transparent transparent;
 }
 
+.description-list {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 100px;
+  margin-bottom: 40px;
+  align-items: start;
+  text-align: left !important;
+}
+
+.description-items {
+  margin-bottom: 10px;
+}
+
+.description-items::before {
+  content: "\2022"; /* Bullet point */
+  color: #000000; /* Change the color as needed */
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.form-font {
+  font-size: 17px;
+  font-weight: normal;
+}
+
 /* Responsive design */
 @media screen and (max-width: 1000px) {
   .header-image-container {
@@ -194,6 +220,9 @@
 
   .add-student-form .submit-button {
     margin-top: 15px;
+  }
+  .description-list {
+    margin-left: 20px;
   }
 }
 

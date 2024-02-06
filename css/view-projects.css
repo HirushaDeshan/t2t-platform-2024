@@ -117,9 +117,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem auto;
+  margin: 15px auto 5px;
   max-width: 1200px;
-  padding: 20px;
+  padding: 0px 20px;
 }
 
 .description-text-container {
@@ -130,7 +130,10 @@ body {
   font-size: 1.2rem;
   line-height: 1.5;
   color: #1c2541;
-  margin-bottom: 1rem;
+}
+
+.italic-text {
+  font-style: italic;
 }
 
 /* Benefits section */
@@ -457,8 +460,7 @@ body {
 }
 
 #search-bar {
-  margin: 20px 20px;
-  margin-top: 20px;
+  margin-top: 5px;
   padding: 10px;
   width: 100%;
   box-sizing: border-box;

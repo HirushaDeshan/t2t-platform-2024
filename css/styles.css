@@ -115,9 +115,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem auto;
+  margin: 2rem auto 0;
   max-width: 1200px;
-  padding: 20px;
 }
 
 .description-text-container {

@@ -137,49 +137,36 @@
       <div class="description-container">
         <div class="description-text-container">
           <p class="description-text">
-            Thank you for your interest in reaching out to us. We value your
-            feedback, questions, and suggestions, and we're here to assist you
-            in any way we can. Please don't hesitate to get in touch with us
-            using the following methods:
+            Thank you for expressing your interest! We're excited to explore
+            this opportunity with you. Here are some general guidelines to keep
+            in mind:
           </p>
+          <ul class="description-list">
+            <li class="description-items">
+              Select a team before applying to a project.
+            </li>
+            <li class="description-items">
+              Understand the given problem thoroughly.
+            </li>
+            <li class="description-items">
+              If you're interested in a project, please create a minimum
+              3-minute video covering the following points:
+            </li>
+
+            <li class="description-items" style="margin-left: 50px">
+              Why you're interested in this project
+            </li>
+            <li class="description-items" style="margin-left: 50px">
+              Your proposed solution to the problem
+            </li>
+            <li class="description-items" style="margin-left: 50px">
+              How your team plans to contribute
+            </li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <section class="description">
-      <div class="description-container">
-        <div class="description-text-container">
-          <p class="description-text-2" id="message"></p>
-          <br /><br />
-          <p class="description-text">
-            Guidelines: This document outlines important information and
-            instructions regarding the submission process. It will help you
-            ensure that your Expression of Interest (EOI) is complete and meets
-            our requirements.
-          </p>
-          <p class="description-text">
-            Sample Project Proposal: We have included a sample project proposal
-            to give you an idea of what a well-structured proposal looks like.
-            While it's not mandatory to follow this format, it can serve as a
-            helpful reference when crafting your proposal.
-          </p>
-          <p class="description-text">
-            Please click on the links below to download these documents:
-          </p>
-          <p class="description-text">
-            <li>
-              <a href="docs\SampleGuide.pdf" download>Download Guidelines</a>
-            </li>
-            <br />
-            <li>
-              <a href="docs\sample.docx" download
-                >Download Sample Project Proposal</a
-              >
-            </li>
-          </p>
-        </div>
-      </div>
-    </section>
     <section class="add-student-container">
       <form id="uploadForm" class="add-student-form">
         <input type="hidden" value="" name="fileContent" id="fileContent" />
@@ -226,15 +213,22 @@
           <label><span class="mandatory"></span>Contact No:</label>
           <input required type="number" value="" name="Contact" id="mobile-1" />
         </div>
-        <div class="form-group">
-          <label><span class="mandatory"></span>Team Name:</label>
-          <input
+        <div class="form-group full-width">
+          <label
+            ><span class="mandatory"></span>Team Name and Description :<br />
+            <span class="form-font">
+              We Encourage Teamwork. Share Details About Your Team, Specialties,
+              and Interests.
+            </span>
+          </label>
+          <textarea
             required
             type="text"
             value=""
             name="Team_Name"
             id="Team-Name"
-          />
+          >
+          </textarea>
         </div>
         <div class="form-group">
           <label><span class="mandatory"></span>Email Address :</label>
@@ -247,48 +241,16 @@
           />
         </div>
         <div class="form-group full-width">
-          <label for="Select Student"
-            ><span class="mandatory"></span>Select Group Members:</label
-          >
-          <select class="chosen-select-student" id="Select1" name="Member_1">
-            <option></option>
-            <!-- Options will be dynamically populated here -->
-          </select>
-          <select class="chosen-select-student" id="Select2" name="Member_2">
-            <option></option>
-            <!-- Options will be dynamically populated here -->
-          </select>
-          <select class="chosen-select-student" id="Select3" name="Member_3">
-            <option></option>
-            <!-- Options will be dynamically populated here -->
-          </select>
-          <select class="chosen-select-student" id="Select4" name="Member_4">
-            <option></option>
-            <!-- Options will be dynamically populated here -->
-          </select>
+          <label
+            ><span class="mandatory"></span>Your EoI Video Link: <br />
+            <span class="form-font">
+              Please Create a Minimum 3-Minute Video Covering Why You're
+              Interested in This Project, Your Proposed Solution to the Problem,
+              and How Your Team Plans to Contribute.
+            </span>
+          </label>
+          <input required type="url" value="" name="link" id="link" />
         </div>
-        <div class="form-group full-width">
-          <label for="Select Mentor"
-            ><span class="mandatory"></span>Select a Mentor:</label
-          >
-          <select class="chosen-select-mentor" id="Select5" name="Mentor">
-            <option></option>
-            <!-- Options will be dynamically populated here -->
-          </select>
-        </div>
-        <div class="form-group full-width">
-          <label for="attach"
-            ><span class="mandatory"></span>Add Project Proposal:</label
-          >
-          <input
-            required
-            type="file"
-            class="cv-upload"
-            id="attach"
-            name="attach"
-          />
-        </div>
-
         <input
           value="Submit"
           class="submit-button header-button"
