@@ -168,50 +168,26 @@
     </section>
 
     <section class="add-student-container">
-      <form id="uploadForm" class="add-student-form">
-        <input type="hidden" value="" name="fileContent" id="fileContent" />
-        <input type="hidden" value="" name="filename" id="filename" />
-        <!-- <input type="hidden" name="Project_Title" id="Project_Title" value="" /> -->
-        <input type="hidden" name="Project_Title" id="projectTitle" value="" />
+      <form class="add-student-form">
+        <input type="hidden" name="Title" id="projectTitle" />
         <div class="mandatory-container container">
           <p><span class="mandatory"></span>Mandatory Fields</p>
         </div>
         <div class="form-group">
           <label><span class="mandatory"></span>NIC Number:</label>
-          <input
-            required
-            type="text"
-            value=""
-            name="NIC_Number"
-            id="nic-number"
-          />
-          <section class="hidden-section" id="warning-message">
-            <p>Please use a different NIC number.</p>
-          </section>
+          <input required type="text" name="NIC" id="nic-number" />
         </div>
         <div class="form-group">
           <label><span class="mandatory"></span>First Name:</label>
-          <input
-            required
-            type="text"
-            value=""
-            name="First_Name"
-            id="first-name"
-          />
+          <input required type="text" name="FName" id="first-name" />
         </div>
         <div class="form-group">
           <label><span class="mandatory"></span>Last Name:</label>
-          <input
-            required
-            type="text"
-            value=""
-            name="Last_Name"
-            id="last-name"
-          />
+          <input required type="text" name="LName" id="last-name" />
         </div>
         <div class="form-group">
           <label><span class="mandatory"></span>Contact No:</label>
-          <input required type="number" value="" name="Contact" id="mobile-1" />
+          <input required type="number" name="Contact" id="mobile-1" />
         </div>
         <div class="form-group full-width">
           <label
@@ -221,24 +197,12 @@
               and Interests.
             </span>
           </label>
-          <textarea
-            required
-            type="text"
-            value=""
-            name="Team_Name"
-            id="Team-Name"
-          >
+          <textarea required type="text" name="TeamName" id="Team-Name">
           </textarea>
         </div>
         <div class="form-group">
           <label><span class="mandatory"></span>Email Address :</label>
-          <input
-            required
-            type="email"
-            value=""
-            name="Email_Address"
-            id="Email_Address"
-          />
+          <input required type="email" name="Email" id="Email_Address" />
         </div>
         <div class="form-group full-width">
           <label
@@ -249,34 +213,27 @@
               and How Your Team Plans to Contribute.
             </span>
           </label>
-          <input required type="url" value="" name="link" id="link" />
+          <input required type="url" name="Link" id="link" />
         </div>
-        <input
-          value="Submit"
-          class="submit-button header-button"
-          type="submit"
-        />
+        <div class="form-group full-width">
+          <button
+            type="submit"
+            class="submit-button header-button"
+            id="submit-button"
+          >
+            Submit
+          </button>
+        </div>
       </form>
     </section>
 
     <div class="loading-container">
       <span class="loading-dots">Please wait, submitting content</span>
     </div>
-    <section class="hidden-section" id="warning-message">
-      <p>
-        Error: The NIC number you entered already exists. Please use a different
-        NIC number.
-      </p>
-    </section>
     <section class="hidden-section" id="normal-message">
       <p>
         Thank you for submitting your Details! We will review it and get back to
         you as soon as possible.
-      </p>
-      <p>
-        In the meantime, you can visit our
-        <a href="#">Home Page</a> for more information about the platform
-        services.
       </p>
     </section>
 
@@ -290,6 +247,7 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script src="js/expression-of-interest.js"></script>
+    <!-- <script src="js/expression-of-interest.js"></script> -->
+    <script src="js/new-expression-of-interest.js"></script>
   </body>
 </html>

@@ -1,0 +1,112 @@
+    <section class="add-student-container">
+      <form id="uploadForm" class="add-student-form">
+        <input type="hidden" value="" name="fileContent" id="fileContent" />
+        <input type="hidden" value="" name="filename" id="filename" />
+        <!-- <input type="hidden" name="Project_Title" id="Project_Title" value="" /> -->
+        <input type="hidden" name="Project_Title" id="projectTitle" value="" />
+        <div class="mandatory-container container">
+          <p><span class="mandatory"></span>Mandatory Fields</p>
+        </div>
+        <div class="form-group">
+          <label><span class="mandatory"></span>NIC Number:</label>
+          <input
+            required
+            type="text"
+            value=""
+            name="NIC_Number"
+            id="nic-number"
+          />
+          <section class="hidden-section" id="warning-message">
+            <p>Please use a different NIC number.</p>
+          </section>
+        </div>
+        <div class="form-group">
+          <label><span class="mandatory"></span>First Name:</label>
+          <input
+            required
+            type="text"
+            value=""
+            name="First_Name"
+            id="first-name"
+          />
+        </div>
+        <div class="form-group">
+          <label><span class="mandatory"></span>Last Name:</label>
+          <input
+            required
+            type="text"
+            value=""
+            name="Last_Name"
+            id="last-name"
+          />
+        </div>
+        <div class="form-group">
+          <label><span class="mandatory"></span>Contact No:</label>
+          <input required type="number" value="" name="Contact" id="mobile-1" />
+        </div>
+        <div class="form-group full-width">
+          <label
+            ><span class="mandatory"></span>Team Name and Description :<br />
+            <span class="form-font">
+              We Encourage Teamwork. Share Details About Your Team, Specialties,
+              and Interests.
+            </span>
+          </label>
+          <textarea
+            required
+            type="text"
+            value=""
+            name="Team_Name"
+            id="Team-Name"
+          >
+          </textarea>
+        </div>
+        <div class="form-group">
+          <label><span class="mandatory"></span>Email Address :</label>
+          <input
+            required
+            type="email"
+            value=""
+            name="Email_Address"
+            id="Email_Address"
+          />
+        </div>
+        <div class="form-group full-width">
+          <label
+            ><span class="mandatory"></span>Your EoI Video Link: <br />
+            <span class="form-font">
+              Please Create a Minimum 3-Minute Video Covering Why You're
+              Interested in This Project, Your Proposed Solution to the Problem,
+              and How Your Team Plans to Contribute.
+            </span>
+          </label>
+          <input required type="url" value="" name="link" id="link" />
+        </div>
+        <input
+          value="Submit"
+          class="submit-button header-button"
+          type="submit"
+        />
+      </form>
+    </section>
+
+    <div class="loading-container">
+      <span class="loading-dots">Please wait, submitting content</span>
+    </div>
+    <section class="hidden-section" id="warning-message">
+      <p>
+        Error: The NIC number you entered already exists. Please use a different
+        NIC number.
+      </p>
+    </section>
+    <section class="hidden-section" id="normal-message">
+      <p>
+        Thank you for submitting your Details! We will review it and get back to
+        you as soon as possible.
+      </p>
+      <p>
+        In the meantime, you can visit our
+        <a href="#">Home Page</a> for more information about the platform
+        services.
+      </p>
+    </section>
